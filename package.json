@@ -1,0 +1,23 @@
+{
+  "name": "paquete_personalizado",
+  "version": "1.0.0",
+  "description": "Este es un paquete personalizado",
+  "main": "miIndex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabi-Nap/Ejercicios-Backend.git"
+  },
+  "keywords": [
+    "paquete",
+    "personalizado"
+  ],
+  "author": "Gabriel Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabi-Nap/Ejercicios-Backend/issues"
+  },
+  "homepage": "https://github.com/Gabi-Nap/Ejercicios-Backend#readme"
+}

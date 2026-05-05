@@ -68,23 +68,25 @@ function generarEtiqueta(nombreProducto) {
         },4000)
     })
 }
-
-productoAComprar=`hoja`
-validarStock(productoAComprar,productos)
-.then(response=>{
-    productoAComprar=response
-    return realizarVenta(response)
-})
-.then(response=>{
-    console.log(response)
-    return generarEtiqueta(productoAComprar.nombreProducto)
-})
-.then(response=>{
-    console.log(response)
-})
-.catch(error=>{
-    console.log(error)
-})
-.finally(end=>{
-    console.log(`----FINALIZO LA OPERACION----`.yellow)
-})
+function ejecutarCompraProducto() {
+    productoAComprar=`hoja`
+    validarStock(productoAComprar,productos)
+    .then(response=>{
+        productoAComprar=response
+        return realizarVenta(response)
+    })
+    .then(response=>{
+        console.log(response)
+        return generarEtiqueta(productoAComprar.nombreProducto)
+    })
+    .then(response=>{
+        console.log(response)
+    })
+    .catch(error=>{
+        console.log(error)
+    })
+    .finally(end=>{
+        console.log(`----FINALIZO LA OPERACION----`.yellow)
+    })
+}
+    module.exports = {ejecutarCompraProducto}

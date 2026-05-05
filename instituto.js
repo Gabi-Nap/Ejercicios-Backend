@@ -27,8 +27,9 @@ function inscripcionMateria(alumno, materia) {
         },5000)
     })
 }
-
-validarCorrelativa(alumno)
+function ejecutarValidarInscribir(){
+    
+    validarCorrelativa(alumno)
     .then(response => {
         console.log(response)
         return inscripcionMateria(alumno, `ingles`)
@@ -44,3 +45,5 @@ validarCorrelativa(alumno)
     .finally(end=>{
         console.log(`----FINALIZO LA OPERACION----`.yellow)
     })
+}
+module.exports = { ejecutarValidarInscribir}

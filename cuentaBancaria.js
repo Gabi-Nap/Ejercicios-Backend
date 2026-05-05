@@ -25,8 +25,9 @@ function realizarTransferencia(importe) {
         },10000)
     })
 }
+function ejecutarValidarTransferir(){
 
-validarSaldo(importe)
+    validarSaldo(importe)
     .then(response => {
         console.log(response)
         return realizarTransferencia(importe)
@@ -42,5 +43,5 @@ validarSaldo(importe)
     .finally(end=>{
         console.log(`----FINALIZO LA OPERACION----`.yellow)
     })
-
-module.exports = { realizarTransferencia, validarSaldo }
+}
+    module.exports = { ejecutarValidarTransferir }
